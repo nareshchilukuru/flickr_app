@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+	config.relative_url_root = ""
 	require 'flickraw'
   def index
    render

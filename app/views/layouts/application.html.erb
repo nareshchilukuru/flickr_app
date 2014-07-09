@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title><%= yield :page_title || "" %> Flicr</title>
+	  <%= render :partial => 'shared/head_includes' %>
+	</head>
+	<body class="<%= yield :body_class || '' %>">
+	 <div id="shell">
+	  <div id="topbar" class="b-spacer">
+	  	<h1 id="flickr-logo"><%= link_to "Flickr Photo Stream", root_path %></h1>
+	  </div>
+	  <%= yield %>
+	 </div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<%= render :partial => 'shared/messages' -%>
+<% flash.discard %>
+
+<div id="main">
+	<div class="mainbox-spacer">
+		<div class="modify-search">
+			<%= link_to "Modify Search", root_path %>
+	  </div>
+	</div>
+	<%= clfix %>
+	<div class="mainbox-spacer">
+    <%= clfix %>
+		<div id="itemContainer">
+			<% cache(@photos, :expires_in => 1.hour) do %>
+				<% if !@photos or @photos.size < 1 %>
+				  <h1><%= "No Results found with your search" %></h1>
+				<% else %>
+					<% @photos.each do |photo| %>
+			     	<%= photo_icon(photo.title, photo.id) %>
+					<%end%>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<% unless !@photos or @photos.size < 1 %>
+		<div class="holder"></div>
+<% end %>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $("a[rel^='prettyPhoto']").prettyPhoto({
+	  	gallery_markup: '<div class="pp_gallery"> \
+									<a href="#" class="pp_arrow_previous">Previous</a> \
+									<div> \
+										<ul> \
+											{gallery} \
+										</ul> \
+									</div> \
+									<a href="#" class="pp_arrow_next">Next</a> \
+								</div>',
+				image_markup: '<img id="fullResImage" src="{path}" />',
+				social_tools: false,
+				default_width: 500,
+				default_height: 344,
+				horizontal_padding: 20,
+				modal: false
+	  });
+	});
+
+	$(function(){
+
+  $("div.holder").jPages({
+    containerID : "itemContainer"
+  });
+
+});
+</script>

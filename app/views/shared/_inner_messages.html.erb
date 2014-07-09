@@ -1,0 +1,10 @@
+<% [:error, :warning, :info, :success ].each do |message_type| -%>
+  <% if flash[message_type] %>
+    <div id="<%=message_type %>_message" class="message-wrap <%= message_type %>">
+      <%= link_to_function 'CLOSE X', "$('##{message_type}_message').hide();", :class => "right" %>
+      <div class="flash-message <%= message_type %>"><%= raw flash[message_type] %></div>
+      <%= clfix %>
+    </div>
+  <% end -%>
+<% end -%>
+

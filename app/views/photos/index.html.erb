@@ -1,0 +1,19 @@
+<% page_title 'Photos Search |' -%>
+<% body_class 'dashboard' %>
+<div id="main">  
+	<div class="main-title">
+		<h2> Search Photos</h2>
+	</div>
+	<%= clfix %>
+	<% form_tag(:photo) do %>
+	 <div class="mainbox-spacer">
+	  <table class="advanced-search">
+	  	<tr>
+				<td><%= label_tag(:search_term, "Search for:") %></td>
+				<td><%= text_field_tag(:search_term) %></td>
+				<td><%= submit_tag("Enter") %></td>
+			</tr>
+		</table>
+	 </div>
+	<% end %>
+</div>

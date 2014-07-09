@@ -1,0 +1,67 @@
+body {
+    background: none repeat scroll 0 0 #e8e8e8;
+    color: #000;
+    font-family: "Helvetica Neue",sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+}
+
+#topbar {
+  background: url(/images/top-bg.gif) no-repeat 0 0; height: 40px; position: relative; margin: 0 1px;
+}
+
+#topbar .side { float: right; display: inline; padding: 6px 6px 0 0; }
+.b-spacer { margin-bottom: 10px !important; }
+
+.shell, #shell {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 962px;
+}
+
+h1#flickr-logo { font-size: 16px; color: #efefef;float:left; display:inline; padding: 3px 0 0 20px; font-family:Arial; font-weight: 500; letter-spacing: .1em;}
+h1#flickr-logo a { line-height: 32px; vertical-align: middle; color: #dedede; }
+h1#flickr-logo a:hover { text-decoration: none; }
+h1#flickr-logo a img { vertical-align: middle; width: 32px; height: 32px; margin: auto 5px auto auto; }
+
+#main {
+    position: static;
+    z-index: 1;
+}
+
+.main-title { padding-left: 20px; line-height: 40px; }
+.main-title,
+.main-title .end { background: url(/images/main-title.gif) no-repeat 0 0; }
+.main-title .end { background-position: right 0; padding-right: 10px; }
+.main-title h2 { font-size: 16px; color: #333333; font-weight: normal; }
+
+.main-title .end h2 span.inactive {color: #f00; font-weight: 700;}
+.main-title .end h2 span.DNC {color: #f00; font-weight: 700; font-style: italic; font-size: .9em;}
+
+.advanced-search td {padding: 0 2px 5px 2px; vertical-align: bottom; }
+.advanced-search td.vert-middle { vertical-align:middle; }
+.advanced-search td label { font-size: 15px; }
+.advanced-search td div {padding: 0; margin: 0;height: 35px;}
+.advanced-search td input,
+  .advanced-search td select { border: solid 1px #aaa; padding: 3px; line-height:22px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-right: 15px; }
+
+.mainbox-spacer {
+  padding: 10px;
+  -moz-box-shadow: 0 6px 8px 5px #ccc;
+  -webkit-box-shadow: 0 6px 8px 5px #ccc;
+  box-shadow: 0px 6px 8px 5px #ccc;
+}
+
+.message-wrap { color:#382a27; padding: 3px 5px 3px 55px; margin: 5px 2px;  -webkit-border-radius: 3px;  -moz-border-radius: 3px; border: 1px solid #e2e2e2;}
+.message-wrap .flash-message {padding: 10px 0;}
+.message-wrap .right {font-size: 9px;padding: 12px 10px 0 0; color:#909090;}
+.login-wrapper .right {display:none;} /* dont display the close link on login because we don't include the JS packages*/
+.message-wrap.success { background: url(/images/flash_success.png) no-repeat 3px 3px #d9eba9; border: 1px solid #9dca35;}
+.message-wrap.info { background: url(/images/flash_info.png) no-repeat 3px 3px #c4e1f0; border: 1px solid #6eafd4;}
+.message-wrap.error { background: url(/images/flash_error.png) no-repeat 3px 3px #EBB0A4; border: 1px solid #e84222;}
+.message-wrap.warning { background: url(/images/flash_warning.png) no-repeat 3px 3px #f6dea0; border: 1px solid #f3b12c;}
+.flash-message { background: none; border: 0px;}
+
+div.modify-search a { font-size: 1.1em; color: #1188c3; };
+
